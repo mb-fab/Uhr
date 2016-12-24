@@ -2,25 +2,25 @@
 // all measures in millimeters
 
 // rendering parameters
-$fn=50;
+$fn=100;
 
 outer_radius = 100;
-outer_width = 10;
+outer_width = 15;
 
 inner_radius = 20;
 screw_radius = 4;
 
 support_count = 6;
-support_width = 10;
+support_width = 12;
 
-tooth_count = 20;
+tooth_count = 40;
 tooth_width = 6;
 tooth_height = 4;
 
 module support()
 {
     translate([screw_radius, -support_width/2])
-    square([outer_radius-screw_radius, support_width]);
+    square([outer_radius - screw_radius - outer_width/2, support_width]);
 }
 
 module support_structure()
@@ -51,23 +51,24 @@ module teeth()
 
 module gear()
 {
-    // outer circle
+    // draw the outer circle
     difference()
     {
         circle(outer_radius);
         circle(outer_radius - outer_width);
     }
 
-    // inner circle
+    // draw the inner circle
     difference()
     {
         circle(inner_radius);
         circle(screw_radius);
     }
 
-    // support bars
+    // draw the support bars
     support_structure();
 
+    // draw the teeth
     teeth();
 }
 

@@ -1,0 +1,8 @@
+# temporary files
+*~
+.*.swp
+
+# generated files
+gear.svg
+stand.svg
+
