@@ -1,5 +1,5 @@
 
-all: gear.svg stand.svg
+all: gears.svg stand.svg
 
 %.svg: %.scad
 	openscad $< -o temp.svg
@@ -7,5 +7,5 @@ all: gear.svg stand.svg
 	rm temp.svg
 
 clean:
-	rm -fr gear.svg stand.svg
+	rm -fr gears.svg stand.svg
 

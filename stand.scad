@@ -3,7 +3,7 @@
 $fn=100;
 
 // all measures in millimeters
-foot_width = 125;
+foot_width = 250;
 foot_height = 20;
 corner_radius = 5;
 
