@@ -1,14 +1,7 @@
 
+include <global.scad>;
 use <stand.scad>;
 use <gears.scad>;
-
-// all measures in mm
-
-material_thickness = 4;
-
-y_axis1 = 200;
-y_axis2 = y_axis1 + 180;
-y_axis3 = y_axis2 + 130;
 
 linear_extrude(material_thickness)
 stand();
